@@ -67,25 +67,46 @@ choix = str(input("\nFaites votres choix : "))
 print("Vos stats sont :")
 if choix == "Pirate":
    print("Force :", Pirate.ForPi, "Agilité :", Pirate.AgiPi, "Vie :", Pirate.ViePi, "Intelligence :", Pirate.IntPi)
-
+   For = Pirate.ForPi
+   Agi = Pirate.AgiAv
+   Vie = Pirate.VieAv
+   Int = Pirate.IntAv
 if choix == "Aventurier":
    print("Force :", Aventurier.ForAv, "Agilité :", Aventurier.AgiAv, "Vie :", Aventurier.VieAv, "Intelligence :", Aventurier.IntAv)
-
+   For = Aventurier.ForAv
+   Agi = Aventurier.AgiAv
+   Vie = Aventurier.VieAv
+   Int = Aventurier.IntAv
 if choix == "Mage" :
    print("Force :", Mage.ForMa, "Agilité :", Mage.AgiMa, "Vie :", Mage.VieMa, "Intelligence :", Mage.IntMa)
-
+   For = Mage.ForMa
+   Agi = Mage.AgiMa
+   Vie = Mage.VieMa
+   Int = Mage.IntMa
 if choix == "Assassin" :
    print("Force :", Assassin.ForAs, " Agilité :", Assassin.AgiAs, " Vie :", Assassin.VieAs, " Intelligence :", Assassin.IntAs)
-
+   For = Assassin.ForAs
+   Agi = Assassin.AgiAs
+   Vie = Assassin.VieAs
+   Int = ASsassin.IntAs
 if choix == "Gambler" :
    print("Force :", Gambler.ForGa, " Agilité :", Gambler.AgiGa, " Vie :", Gambler.VieGa, " Intelligence :", Gambler.IntGa)
-
+   For = Gambler.ForGa
+   Agi = Gambler.AgiGa
+   Vie = Gambler.VieGa
+   Int = Gambler.IntGa
 if choix == "Alchimiste" :
    print("Force :", Alchimiste.ForAl," Agilité :", Alchimiste.AgiAl," Vie :", Alchimiste.VieAl," Intelligence :", Alchimiste.IntAl)
-
+   For = Alchimiste.ForAl
+   Agi = Alchimiste.AgiAl
+   Vie = Alchimiste.VieAl
+   Int = Alchimiste.IntAl
 if choix == "Archer" :
    print("Force :", Archer.ForAr, " Agilité :", Archer.AgiAr, " Vie :", Archer.VieAr, " Intelligence :", Archer.IntAr)
-   
+   For = Archer.ForAr
+   Agi = Archer.AgiAr
+   Vie = Archer.VieAr
+   Int = Archer.IntAr
 Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous. Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
 print(Salle_1)
 
