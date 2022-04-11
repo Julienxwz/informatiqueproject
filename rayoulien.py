@@ -85,5 +85,9 @@ if choix == "Alchimiste" :
 
 if choix == "Archer" :
    print("Force :", Archer.ForAr, " Agilité :", Archer.AgiAr, " Vie :", Archer.VieAr, " Intelligence :", Archer.IntAr)
+   
+Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous. Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
+print(Salle_1)
+
 
 
