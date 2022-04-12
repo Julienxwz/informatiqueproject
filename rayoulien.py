@@ -68,9 +68,9 @@ print("Vos stats sont :")
 if choix == "Pirate":
    print("Force :", Pirate.ForPi, "Agilité :", Pirate.AgiPi, "Vie :", Pirate.ViePi, "Intelligence :", Pirate.IntPi)
    For = Pirate.ForPi
-   Agi = Pirate.AgiAv
-   Vie = Pirate.VieAv
-   Int = Pirate.IntAv
+   Agi = Pirate.AgiPi
+   Vie = Pirate.ViePi
+   Int = Pirate.IntPi
 if choix == "Aventurier":
    print("Force :", Aventurier.ForAv, "Agilité :", Aventurier.AgiAv, "Vie :", Aventurier.VieAv, "Intelligence :", Aventurier.IntAv)
    For = Aventurier.ForAv
@@ -108,8 +108,12 @@ if choix == "Archer" :
    Vie = Archer.VieAr
    Int = Archer.IntAr
 
-
 Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous."," Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
 
-slow_intro = "\n".join(Salle_1)
-delay_print(slow_intro)
+slow_salle1 = "\n".join(Salle_1)
+delay_print(slow_salle1)
+
+action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," vous essayez de les divertir (Diversion), vous vous dissimulez (Cachette)?"
+
+slow_action1 = "\n".join(action1)
+delay_print(slow_action1)
