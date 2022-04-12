@@ -88,7 +88,7 @@ if choix == "Assassin" :
    For = Assassin.ForAs
    Agi = Assassin.AgiAs
    Vie = Assassin.VieAs
-   Int = ASsassin.IntAs
+   Int = Assassin.IntAs
 if choix == "Gambler" :
    print("Force :", Gambler.ForGa, " Agilité :", Gambler.AgiGa, " Vie :", Gambler.VieGa, " Intelligence :", Gambler.IntGa)
    For = Gambler.ForGa
