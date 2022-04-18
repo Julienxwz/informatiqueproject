@@ -117,3 +117,43 @@ action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Att
 
 slow_action1 = "\n".join(action1)
 delay_print(slow_action1)
+
+
+choix_2 = str(input("\nFaites votres choix : "))
+
+dé = random.randint(1,12)
+print(dé)
+Nbgobelin=3
+
+
+if choix_2 == "Attaque":
+   if For >= dé:
+       dégât = random.randint(1,3)
+       print("Vous avez attaqué le gobelin et vous avez tué", dégât, "gobelin(s)")
+       if dégât < 3 :
+          Nbgobelin = Nbgobelin - dégât
+   elif For <= dé:
+       print("Vous avez attaqué et vous avez raté votre coup lamentablement")
+
+
+if choix_2 == "Sort":
+   if Int >= dé:
+       dégât = random.randint(1,3)
+       print("Vous avez lancé un sort sur le gobelin et vous avez tué", dégât," gobelin(s)")
+       if dégât < 3 :
+           Nbgobelin = Nbgobelin - dégât
+   elif Int <= dé:
+       print("Vous avez lancé un sort sur le gobelin et le sort a failli vous toucher en revenant vers vous")
+
+if choix_2 == "Diversion":
+   if dé == 1 :
+       print("Vous avez réussi à faire diversion sur les trois gobelins et ils ont laissé leurs armes par terre et vous êtes allé les ramasser, vous gagnez donc +1 d'attaque")
+       Force = Force + 1
+   if Int >= dé :
+        print("Vous avez réussi à faire diversion sur les trois gobelins et vous pouvez passé à la salle suivante"
+
+if choix_2 == "Cachette":
+    if Agi >= dé:
+         print("Vous avez réussi à vous cacher, les gobelins ne vous ont pas vu et ont décidé de partir dans l'entrée car ils ont vu que la porte était ouverte, vous pouvez donc accéder à la salle suivante.")
+    elif Agi <= dé :
+         print("Vous n'avez pas réussi à vous cacher et les gobelins vous ont remarqué.")
