@@ -148,9 +148,9 @@ if choix_2 == "Sort":
 if choix_2 == "Diversion":
    if dé == 1 :
        print("Vous avez réussi à faire diversion sur les trois gobelins et ils ont laissé leurs armes par terre et vous êtes allé les ramasser, vous gagnez donc +1 d'attaque")
-       Force = Force + 1
+       For = For + 1
    if Int >= dé :
-        print("Vous avez réussi à faire diversion sur les trois gobelins et vous pouvez passé à la salle suivante"
+        print("Vous avez réussi à faire diversion sur les trois gobelins et vous pouvez passé à la salle suivante")
 
 if choix_2 == "Cachette":
     if Agi >= dé:
