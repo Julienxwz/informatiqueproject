@@ -108,52 +108,61 @@ if choix == "Archer" :
    Vie = Archer.VieAr
    Int = Archer.IntAr
 
-Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous."," Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
+Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
 
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
 
-action1 = "\n""Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," vous essayez de les divertir (Diversion), vous vous dissimulez (Cachette)?"
+action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," vous essayez de les divertir (Diversion), vous vous dissimulez (Cachette)?"
 
 slow_action1 = "\n".join(action1)
 delay_print(slow_action1)
 
 
-choix_2 = str(input("\nFaites votres choix : "))
+ForGo = 3
+VieGo = 2
 
-dé = random.randint(1,12)
-print(dé)
+
+
+def dé() :
+    x = random.randint(1,12)
+    print("Résultat du dé :", x)
+    return x
+
+
+
 Nbgobelin=3
 
 
-if choix_2 == "Attaque":
-   if For >= dé:
-       dégât = random.randint(1,3)
-       print("Vous avez attaqué le gobelin et vous avez tué", dégât, "gobelin(s)")
-       if dégât < 3 :
-          Nbgobelin = Nbgobelin - dégât
-   elif For <= dé:
-       print("Vous avez attaqué et vous avez raté votre coup lamentablement")
 
-
+while Nbgobelin >0 : 
+   choix_2 = str(input("\nFaites votres choix : "))
+   if choix_2 == "Attaque":
+      if For >= dé() :
+         dégât = random.randint(1,Nbgobelin)
+         print("Vous réussissez et tuez", dégât, "gobelin(s)")
+         if dégât < 3 :
+            Nbgobelin -= dégât
+         if dégât == 3 :
+            Nbgobelin = 0
+    elif For <= dé() :
+        print("Vous avez attaqué et vous avez raté votre coup lamentablement")
 if choix_2 == "Sort":
-   if Int >= dé:
-       dégât = random.randint(1,3)
-       print("Vous avez lancé un sort sur le gobelin et vous avez tué", dégât," gobelin(s)")
-       if dégât < 3 :
-           Nbgobelin = Nbgobelin - dégât
-   elif Int <= dé:
-       print("Vous avez lancé un sort sur le gobelin et le sort a failli vous toucher en revenant vers vous")
+    if Int >= dé() :
+        dégât = random.randint(1,Nbgobelin)
+        print("Vous décidez de lancer un sort et vous tuez", dégât," gobelin(s)")
+        if dégât < 3 :
+            Nbgobelin -= dégât
+        if dégât == 3 :
+            Nbgobelin = 0
+    elif Int <= dé() :
+        print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
 
-if choix_2 == "Diversion":
-   if dé == 1 :
-       print("Vous avez réussi à faire diversion sur les trois gobelins et ils ont laissé leurs armes par terre et vous êtes allé les ramasser, vous gagnez donc +1 d'attaque")
-       For = For + 1
-   if Int >= dé :
-        print("Vous avez réussi à faire diversion sur les trois gobelins et vous pouvez passé à la salle suivante")
-
-if choix_2 == "Cachette":
-    if Agi >= dé:
-         print("Vous avez réussi à vous cacher, les gobelins ne vous ont pas vu et ont décidé de partir dans l'entrée car ils ont vu que la porte était ouverte, vous pouvez donc accéder à la salle suivante.")
-    elif Agi <= dé :
-         print("Vous n'avez pas réussi à vous cacher et les gobelins vous ont remarqué.")
+if Nbgobelin > 0 :
+    print("L'ennemi attaque !")
+    if ForGo >= dé() :
+        Vie -= Nbgobelin
+    else :
+      print("L'attaque a raté !)
+     
+            
