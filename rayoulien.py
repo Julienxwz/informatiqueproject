@@ -113,7 +113,7 @@ Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant v
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
 
-action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," ou bien essayer d'esquiver (Esquive) ?"
+action1 = "\n""Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," ou bien essayer d'esquiver (Esquive) ?"
 
 slow_action1 = "\n".join(action1)
 delay_print(slow_action1)
@@ -164,4 +164,3 @@ while Nbgobelin > 0 :
             Vie -= Nbgobelin
         else :
             print("L'attaque a raté")
-
