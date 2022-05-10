@@ -113,7 +113,7 @@ Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant v
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
 
-action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," vous essayez de les divertir (Diversion), vous vous dissimulez (Cachette)?"
+action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," ou bien essayer d'esquiver (Esquive) ?"
 
 slow_action1 = "\n".join(action1)
 delay_print(slow_action1)
@@ -135,34 +135,33 @@ Nbgobelin=3
 
 
 
-while Nbgobelin >0 : 
-   choix_2 = str(input("\nFaites votres choix : "))
-   if choix_2 == "Attaque":
-      if For >= dé() :
-         dégât = random.randint(1,Nbgobelin)
-         print("Vous réussissez et tuez", dégât, "gobelin(s)")
-         if dégât < 3 :
-            Nbgobelin -= dégât
-         if dégât == 3 :
-            Nbgobelin = 0
-    elif For <= dé() :
-        print("Vous avez attaqué et vous avez raté votre coup lamentablement")
-if choix_2 == "Sort":
-    if Int >= dé() :
-        dégât = random.randint(1,Nbgobelin)
-        print("Vous décidez de lancer un sort et vous tuez", dégât," gobelin(s)")
-        if dégât < 3 :
-            Nbgobelin -= dégât
-        if dégât == 3 :
-            Nbgobelin = 0
-    elif Int <= dé() :
-        print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
+while Nbgobelin > 0 :
+    choix_2 = str(input("\nFaites votres choix : "))
+    if choix_2 == "Attaque":
+        if For >= dé() :
+            dégât = random.randint(1,Nbgobelin)
+            print("Vous réussissez et tuez", dégât, "gobelin(s)")
+            if dégât < 3 :
+                Nbgobelin -= dégât
+            if dégât == 3 :
+                Nbgobelin = 0
+        elif For <= dé() :
+            print("Vous avez attaqué et vous avez raté votre coup lamentablement")
+    if choix_2 == "Sort":
+        if Int >= dé() :
+            dégât = random.randint(1,Nbgobelin)
+            print("Vous décidez de lancer un sort et vous tuez", dégât," gobelin(s)")
+            if dégât < 3 :
+                Nbgobelin -= dégât
+            if dégât == 3 :
+                Nbgobelin = 0
+        elif Int <= dé() :
+            print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
 
-if Nbgobelin > 0 :
-    print("L'ennemi attaque !")
-    if ForGo >= dé() :
-        Vie -= Nbgobelin
-    else :
-      print("L'attaque a raté !)
-     
-            
+    if Nbgobelin > 0 :
+        print("L'ennemi attaque !")
+        if ForGo >= dé() :
+            Vie -= Nbgobelin
+        else :
+            print("L'attaque a raté")
+
