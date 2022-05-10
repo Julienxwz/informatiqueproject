@@ -7,46 +7,46 @@ import random
 
 
 class Aventurier():
-   ForAv = 6
-   AgiAv = random.randint(4,5)
-   VieAv = 6
-   IntAv = random.randint(4,5)
+   for_av = 6
+   agi_av = random.randint(4,5)
+   vie_av= 6
+   int_av = random.randint(4,5)
 
 class Alchimiste():
-   ForAl = random.randint(2,3)
-   AgiAl = 6
-   VieAl = random.randint(3,4)
-   IntAl = random.randint(6,8)
+   for_al = random.randint(2,3)
+   agi_al = 6
+   vie_al = random.randint(3,4)
+   int_al = random.randint(6,8)
 
 class Assassin():
-   ForAs = random.randint(7,10)
-   AgiAs = random.randint(8,10)
-   VieAs = random.randint(1,2)
-   IntAs = random.randint(5,7)
+   for_as = random.randint(7,10)
+   agi_as = random.randint(8,10)
+   vie_as = random.randint(1,2)
+   int_as = random.randint(5,7)
 
 class Pirate():
-   ForPi = random.randint(6,8)
-   AgiPi = random.randint(3,5)
-   ViePi = random.randint(6,8)
-   IntPi = random.randint(1,3)
+   for_pi = random.randint(6,8)
+   agi_pi = random.randint(3,5)
+   vie_pi = random.randint(6,8)
+   int_pi = random.randint(1,3)
 
 class Archer():
-   ForAr = random.randint(5,7)
-   AgiAr = random.randint(6,8)
-   VieAr = random.randint(2,4)
-   IntAr = random.randint(4,6)
+   for_ar = random.randint(5,7)
+   agi_ar = random.randint(6,8)
+   vie_ar = random.randint(2,4)
+   int_ar = random.randint(4,6)
 
 class Mage():
-   ForMa = 1
-   AgiMa = random.randint(2,3)
-   VieMa = random.randint(5,6)
-   IntMa = random.randint(7,10)
+   for_ma = 1
+   agi_ma = random.randint(2,3)
+   vie_ma = random.randint(5,6)
+   int_ma = random.randint(7,10)
 
 class Gambler():
-   ForGa = random.randint(1,9)
-   AgiGa = random.randint(1,9)
-   VieGa = random.randint(1,9)
-   IntGa = random.randint(1,9)
+   for_ga = random.randint(1,9)
+   agi_ga = random.randint(1,9)
+   vie_ga = random.randint(1,9)
+   int_ga = random.randint(1,9)
 
 
 def delay_print(s):
@@ -66,54 +66,54 @@ delay_print(slow_intro)
 choix = str(input("\nFaites votres choix : "))
 print("Vos stats sont :")
 if choix == "Pirate":
-   print("Force :", Pirate.ForPi, "Agilité :", Pirate.AgiPi, "Vie :", Pirate.ViePi, "Intelligence :", Pirate.IntPi)
-   For = Pirate.ForPi
-   Agi = Pirate.AgiPi
-   Vie = Pirate.ViePi
-   Int = Pirate.IntPi
+   print("Force :", Pirate.for_pi, "Agilité :", Pirate.agi_pi, "Vie :", Pirate.vie_pi, "Intelligence :", Pirate.int_pi)
+   For = Pirate.for_pi
+   Agi = Pirate.agi_pi
+   Vie = Pirate.vie_pi
+   Int = Pirate.int_pi
 if choix == "Aventurier":
-   print("Force :", Aventurier.ForAv, "Agilité :", Aventurier.AgiAv, "Vie :", Aventurier.VieAv, "Intelligence :", Aventurier.IntAv)
-   For = Aventurier.ForAv
-   Agi = Aventurier.AgiAv
-   Vie = Aventurier.VieAv
-   Int = Aventurier.IntAv
+   print("Force :", Aventurier.for_av, "Agilité :", Aventurier.agi_av, "Vie :", Aventurier.vie_av, "Intelligence :", Aventurier.int_av)
+   For = Aventurier.for_av
+   Agi = Aventurier.agi_av
+   Vie = Aventurier.vie_av
+   Int = Aventurier.int_av
 if choix == "Mage" :
-   print("Force :", Mage.ForMa, "Agilité :", Mage.AgiMa, "Vie :", Mage.VieMa, "Intelligence :", Mage.IntMa)
-   For = Mage.ForMa
-   Agi = Mage.AgiMa
-   Vie = Mage.VieMa
-   Int = Mage.IntMa
+   print("Force :", Mage.for_ma, "Agilité :", Mage.agi_ma, "Vie :", Mage.vie_ma, "Intelligence :", Mage.int_ma)
+   For = Mage.for_ma
+   Agi = Mage.agi_ma
+   Vie = Mage.vie_ma
+   Int = Mage.int_ma
 if choix == "Assassin" :
-   print("Force :", Assassin.ForAs, " Agilité :", Assassin.AgiAs, " Vie :", Assassin.VieAs, " Intelligence :", Assassin.IntAs)
-   For = Assassin.ForAs
-   Agi = Assassin.AgiAs
-   Vie = Assassin.VieAs
-   Int = Assassin.IntAs
+   print("Force :", Assassin.for_as, " Agilité :", Assassin.agi_as, " Vie :", Assassin.vie_as, " Intelligence :", Assassin.int_as)
+   For = Assassin.for_as
+   Agi = Assassin.agi_as
+   Vie = Assassin.vie_as
+   Int = Assassin.int_as
 if choix == "Gambler" :
-   print("Force :", Gambler.ForGa, " Agilité :", Gambler.AgiGa, " Vie :", Gambler.VieGa, " Intelligence :", Gambler.IntGa)
-   For = Gambler.ForGa
-   Agi = Gambler.AgiGa
-   Vie = Gambler.VieGa
-   Int = Gambler.IntGa
+   print("Force :", Gambler.for_ga, " Agilité :", Gambler.agi_ga, " Vie :", Gambler.vie_ga, " Intelligence :", Gambler.int_ga)
+   For = Gambler.for_ga
+   Agi = Gambler.agi_ga
+   Vie = Gambler.vie_ga
+   Int = Gambler.int_ga
 if choix == "Alchimiste" :
-   print("Force :", Alchimiste.ForAl," Agilité :", Alchimiste.AgiAl," Vie :", Alchimiste.VieAl," Intelligence :", Alchimiste.IntAl)
-   For = Alchimiste.ForAl
-   Agi = Alchimiste.AgiAl
-   Vie = Alchimiste.VieAl
-   Int = Alchimiste.IntAl
+   print("Force :", Alchimiste.for_al," Agilité :", Alchimiste.agi_al," Vie :", Alchimiste.vie_al," Intelligence :", Alchimiste.int_al)
+   For = Alchimiste.for_al
+   Agi = Alchimiste.agi_al
+   Vie = Alchimiste.vie_al
+   Int = Alchimiste.int_al
 if choix == "Archer" :
-   print("Force :", Archer.ForAr, " Agilité :", Archer.AgiAr, " Vie :", Archer.VieAr, " Intelligence :", Archer.IntAr)
-   For = Archer.ForAr
-   Agi = Archer.AgiAr
-   Vie = Archer.VieAr
-   Int = Archer.IntAr
+   print("Force :", Archer.for_ar, " Agilité :", Archer.agi_ar, " Vie :", Archer.vie_ar, " Intelligence :", Archer.int_ar)
+   For = Archer.for_ar
+   Agi = Archer.agi_ar
+   Vie = Archer.vie_ar
+   Int = Archer.int_ar
 
 Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
 
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
 
-action1 = "\n""Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," ou bien essayer d'esquiver (Esquive) ?"
+action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," ou bien essayer d'esquiver (Esquive) ?"
 
 slow_action1 = "\n".join(action1)
 delay_print(slow_action1)
@@ -162,5 +162,10 @@ while Nbgobelin > 0 :
         print("L'ennemi attaque !")
         if ForGo >= dé() :
             Vie -= Nbgobelin
+            print("L'ennemi vous a touché, il vous reste", Vie)
+            if Vie ==0:
+                print("Vous êtes mort comme une merde ")
+            elif Vie <= 0:
+                print("Vous êtes mort comme une merde ")
         else :
             print("L'attaque a raté")
