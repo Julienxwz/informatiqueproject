@@ -119,8 +119,8 @@ slow_action1 = "\n".join(action1)
 delay_print(slow_action1)
 
 
-ForGo = 3
-VieGo = 2
+for_go = 3
+vie_go = 2
 
 
 
@@ -131,41 +131,39 @@ def dé() :
 
 
 
-nbgobelin=3
+nb_gobelin=3
 
 
 
-while nbgobelin > 0 :
+while nb_gobelin > 0 :
     choix_2 = str(input("\nFaites votres choix : "))
     if choix_2 == "Attaque":
         if For >= dé() :
-            dégât = random.randint(1,nbgobelin)
+            dégât = random.randint(1,nb_gobelin)
             print("Vous réussissez et tuez", dégât, "gobelin(s)")
             if dégât < 3 :
-                nbgobelin -= dégât
+                nb_gobelin -= dégât
             if dégât == 3 :
-                nbgobelin = 0
+                nb_gobelin = 0
         elif For <= dé() :
             print("Vous avez attaqué et vous avez raté votre coup lamentablement")
     if choix_2 == "Sort":
         if Int >= dé() :
-            dégât = random.randint(1,nbgobelin)
+            dégât = random.randint(1,nb_gobelin)
             print("Vous décidez de lancer un sort et vous tuez", dégât," gobelin(s)")
             if dégât < 3 :
-                nbgobelin -= dégât
+                nb_gobelin -= dégât
             if dégât == 3 :
-                nbgobelin = 0
+                nb_gobelin = 0
         elif Int <= dé() :
             print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
 
-    if nbgobelin > 0 :
+    if nb_gobelin > 0 :
         print("L'ennemi attaque !")
         if forgo >= dé() :
-            Vie -= nbgobelin
-            print("L'ennemi vous a touché, il vous reste", Vie)
-            if Vie ==0:
-                print("Vous êtes mort comme une merde ")
-            elif Vie <= 0:
-                print("Vous êtes mort comme une merde ")
+            Vie -= nb_gobelin
+            print("L'ennemi vous a touché, il vous reste", Vie,"pv(s) !")
+            if Vie <= 0:
+                print("Le coup vous est mortel, vous avez échoué...","n\Pour cette fois...")
         else :
-            print("L'attaque a raté")
+            print("L'attaque a raté !")
