@@ -21,7 +21,7 @@ class Alchimiste():
 class Assassin():
    for_as = random.randint(7,10)
    agi_as = random.randint(8,10)
-   vie_as = random.randint(1,2)
+   vie_as = random.randint(1,3)
    int_as = random.randint(5,7)
 
 class Pirate():
@@ -33,7 +33,7 @@ class Pirate():
 class Archer():
    for_ar = random.randint(5,7)
    agi_ar = random.randint(6,8)
-   vie_ar = random.randint(2,4)
+   vie_ar = random.randint(3,4)
    int_ar = random.randint(4,6)
 
 class Mage():
@@ -108,23 +108,18 @@ if choix == "Archer" :
    Vie = Archer.vie_ar
    Int = Archer.int_ar
 
-Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins.","Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort), ou bien essayez d'esquiver (Esquive) ?"
+Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins.","Que faites-vous dans cette situation ? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort), ou bien essayez d'esquiver (Esquive) ?"
 
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
 
 
 for_go = 3
-vie_go = 2
-
-
 
 def dé() :
     x = random.randint(1,12)
     print("Résultat du dé :", x)
     return x
-
-
 
 nb_gobelin=3
 mort = "Le coup vous est mortel, vous avez échoué...","Pour cette fois..."
@@ -141,17 +136,13 @@ while nb_gobelin > 0 :
             if dégât == 3 :
                 nb_gobelin = 0
         else :
-            delay_print("Vous avez attaqué et vous avez raté votre coup lamentablement")
+            delay_print("Vous avez attaqué et raté votre coup lamentablement")
     if choix_2 == "Sort":
         if Int >= dé() :
-            dégât = random.randint(1,nb_gobelin)
-            print("Vous décidez de lancer un sort et vous tuez", dégât," gobelin(s)")
-            if dégât < 3 :
-                nb_gobelin -= dégât
-            if dégât == 3 :
-                nb_gobelin = 0
+            Vie += 2
+            print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
         else :
-            delay_print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
+            delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
     if choix_2 == "Esquive" :
         if Agi >= dé():
             print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
@@ -165,7 +156,7 @@ while nb_gobelin > 0 :
             Vie -= nb_gobelin
             print("L'ennemi vous a touché, vous subissez", nb_gobelin,"points de dégat(s) !")
             if Vie > 0:
-                ("Il vous reste", Vie, "pv(s)")
+                print("Il vous reste", Vie, "pv(s)")
             elif Vie <= 0 :
                 delay_print(mort)
                 quit()
@@ -174,3 +165,49 @@ while nb_gobelin > 0 :
     for_go = 3
 
 print("Vous avez triomphé ! Vous pouvez maintenant poursuivre votre avancée.")
+
+print("Dans quelle salle voulez-vous aller?")
+choix_3 = str(input("\nFaites votres choix : "))
+nb_fauves = 2
+for_fa = 5
+vie_fa = 2
+choix_4 = str(input("\nFaites votres choix : "))
+salle_2 = "Vous faites maintenant face à deux fauves."," Que faites-vous dans cette situation ? Vous attaquez (Attaque), vous lancez un sort de soin (Sort), ou bien essayez d'esquiver (Esquive) ?"
+
+while nb_fauves > 0 :
+    if choix_3 == "Salle 2":
+       delay_print(salle_2)
+       print(choix_4)
+       if choix_4 == "Attaque":
+           if For >= dé():
+               vie_fa -= 1
+               print("Vous avez touché votre cible !")
+           elif For <= dé():
+               print("Vous avez attaqué et raté votre coup lamentablement")
+       if choix_4 == "Sort":
+           if Int >= dé():
+               Vie += 2
+               print("Vous lancer un sort de soin et récupérez 2 points de vie !","Vous avez")
+           elif Int <= dé():
+               print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
+       if choix_2 == "Esquive":
+           if Agi >= dé() :
+               print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
+               for_fa = 0
+           else:
+               print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
+    if vie_fa == 0 :
+        nb_fauves -= 1
+        vie_fa = 2
+    if nb_fauves > 0 :
+        print("L'ennemi attaque !")
+        if for_fa >= dé() :
+            Vie -= nb_fauves
+            print("L'ennemi vous a touché, vous subissez", nb_fauves,"points de dégat(s) !")
+            if Vie > 0:
+                print("Il vous reste", Vie, "pv(s)")
+            elif Vie <= 0 :
+                delay_print(mort)
+                quit()
+        else :
+            delay_print("L'attaque a raté !")
