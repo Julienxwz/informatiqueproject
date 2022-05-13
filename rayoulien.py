@@ -131,37 +131,37 @@ def dé() :
 
 
 
-Nbgobelin=3
+nbgobelin=3
 
 
 
-while Nbgobelin > 0 :
+while nbgobelin > 0 :
     choix_2 = str(input("\nFaites votres choix : "))
     if choix_2 == "Attaque":
         if For >= dé() :
-            dégât = random.randint(1,Nbgobelin)
+            dégât = random.randint(1,nbgobelin)
             print("Vous réussissez et tuez", dégât, "gobelin(s)")
             if dégât < 3 :
-                Nbgobelin -= dégât
+                nbgobelin -= dégât
             if dégât == 3 :
-                Nbgobelin = 0
+                nbgobelin = 0
         elif For <= dé() :
             print("Vous avez attaqué et vous avez raté votre coup lamentablement")
     if choix_2 == "Sort":
         if Int >= dé() :
-            dégât = random.randint(1,Nbgobelin)
+            dégât = random.randint(1,nbgobelin)
             print("Vous décidez de lancer un sort et vous tuez", dégât," gobelin(s)")
             if dégât < 3 :
-                Nbgobelin -= dégât
+                nbgobelin -= dégât
             if dégât == 3 :
-                Nbgobelin = 0
+                nbgobelin = 0
         elif Int <= dé() :
             print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
 
-    if Nbgobelin > 0 :
+    if nbgobelin > 0 :
         print("L'ennemi attaque !")
-        if ForGo >= dé() :
-            Vie -= Nbgobelin
+        if forgo >= dé() :
+            Vie -= nbgobelin
             print("L'ennemi vous a touché, il vous reste", Vie)
             if Vie ==0:
                 print("Vous êtes mort comme une merde ")
