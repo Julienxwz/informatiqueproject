@@ -39,8 +39,8 @@ class Archer():
 class Mage():
    for_ma = 1
    agi_ma = random.randint(2,3)
-   vie_ma = random.randint(5,6)
-   int_ma = random.randint(7,10)
+   vie_ma = random.randint(6,7)
+   int_ma = random.randint(8,10)
 
 class Gambler():
    for_ga = random.randint(1,9)
@@ -108,15 +108,10 @@ if choix == "Archer" :
    Vie = Archer.vie_ar
    Int = Archer.int_ar
 
-Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous ; des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
+Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins.","Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort), ou bien essayez d'esquiver (Esquive) ?"
 
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
-
-action1 = "Que faites-vous dans cette situation? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort),"," ou bien essayer d'esquiver (Esquive) ?"
-
-slow_action1 = "\n".join(action1)
-delay_print(slow_action1)
 
 
 for_go = 3
@@ -132,7 +127,7 @@ def dé() :
 
 
 nb_gobelin=3
-
+mort = "Le coup vous est mortel, vous avez échoué...","Pour cette fois..."
 
 
 while nb_gobelin > 0 :
@@ -145,8 +140,8 @@ while nb_gobelin > 0 :
                 nb_gobelin -= dégât
             if dégât == 3 :
                 nb_gobelin = 0
-        elif For <= dé() :
-            print("Vous avez attaqué et vous avez raté votre coup lamentablement")
+        else :
+            delay_print("Vous avez attaqué et vous avez raté votre coup lamentablement")
     if choix_2 == "Sort":
         if Int >= dé() :
             dégât = random.randint(1,nb_gobelin)
@@ -155,15 +150,27 @@ while nb_gobelin > 0 :
                 nb_gobelin -= dégât
             if dégât == 3 :
                 nb_gobelin = 0
-        elif Int <= dé() :
-            print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
+        else :
+            delay_print("Vous avez lancé un sort et celui-ci a failli vous toucher en revenant vers vous")
+    if choix_2 == "Esquive" :
+        if Agi >= dé():
+            print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
+            for_go = 0
+        else :
+            print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
 
     if nb_gobelin > 0 :
         print("L'ennemi attaque !")
-        if forgo >= dé() :
+        if for_go >= dé() :
             Vie -= nb_gobelin
-            print("L'ennemi vous a touché, il vous reste", Vie,"pv(s) !")
-            if Vie <= 0:
-                print("Le coup vous est mortel, vous avez échoué...","n\Pour cette fois...")
+            print("L'ennemi vous a touché, vous subissez", nb_gobelin,"points de dégat(s) !")
+            if Vie > 0:
+                ("Il vous reste", Vie, "pv(s)")
+            elif Vie <= 0 :
+                delay_print(mort)
+                quit()
         else :
-            print("L'attaque a raté !")
+            delay_print("L'attaque a raté !")
+    for_go = 3
+
+print("Vous avez triomphé ! Vous pouvez maintenant poursuivre votre avancée.")
