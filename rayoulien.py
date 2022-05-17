@@ -108,17 +108,18 @@ if choix == "Archer" :
    Vie = Archer.vie_ar
    Int = Archer.int_ar
 
-Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins.","Que faites-vous dans cette situation ? Vous attaquez physiquement (Attaque), vous lancez un sort (Sort), ou bien essayez d'esquiver (Esquive) ?"
+Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins.","Que faites-vous dans cette situation ? Vous attaquez physiquement (Attaque), vous lancez un sort de soin(Sort), ou bien essayez d'esquiver (Esquive) ?"
 
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
 
+vie_max = Vie
 
 for_go = 3
 
 def dé() :
     x = random.randint(1,12)
-    print("Résultat du dé :", x)
+    print("\nRésultat du dé :", x)
     return x
 
 nb_gobelin=3
@@ -139,8 +140,15 @@ while nb_gobelin > 0 :
             delay_print("Vous avez attaqué et raté votre coup lamentablement")
     if choix_2 == "Sort":
         if Int >= dé() :
-            Vie += 2
-            print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
+            if vie_max - Vie >= 2 :
+               Vie += 2
+               print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
+            if vie_max - Vie == 1 :
+               Vie+= 1
+               print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie !")
+            if vie_max - Vie == 0 :
+               print("Vous êtes déjà en pleine forme !")
+               continue
         else :
             delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
     if choix_2 == "Esquive" :
@@ -151,7 +159,7 @@ while nb_gobelin > 0 :
             print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
 
     if nb_gobelin > 0 :
-        print("L'ennemi attaque !")
+        delay_print("L'ennemi attaque !")
         if for_go >= dé() :
             Vie -= nb_gobelin
             print("L'ennemi vous a touché, vous subissez", nb_gobelin,"points de dégat(s) !")
