@@ -200,7 +200,7 @@ while nb_fauves > 0 :
         nb_fauves -= 1
         vie_fa = 2
     if nb_fauves > 0 :
-        print(" L'ennemi attaque !")
+        print(" n\L'ennemi attaque !")
         if for_fa >= dé() :
             Vie -= nb_fauves
             print("L'ennemi vous a touché, vous subissez", nb_fauves,"points de dégat(s) !")
