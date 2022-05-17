@@ -195,11 +195,18 @@ if choix_3 == "Salle 2":
             elif For <= dé():
                print("Vous avez attaqué et raté votre coup lamentablement")
         if choix_4 == "Sort":
-            if Int >= dé():
-                Vie += 2
-                print("Vous lancer un sort de soin et récupérez 2 points de vie !","Vous avez")
-            elif Int <= dé():
-                print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
+            if Int >= dé() :
+            if vie_max - Vie >= 2 :
+               Vie += 2
+               print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
+            if vie_max - Vie == 1 :
+               Vie+= 1
+               print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie !")
+            if vie_max - Vie == 0 :
+               print("Vous êtes déjà en pleine forme !")
+               continue
+        else :
+            delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
         if choix_2 == "Esquive":
             if Agi >= dé() :
                 print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
