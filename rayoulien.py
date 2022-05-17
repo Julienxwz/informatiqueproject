@@ -151,7 +151,7 @@ while nb_gobelin > 0 :
             print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
 
     if nb_gobelin > 0 :
-        print("n\L'ennemi attaque !")
+        print("L'ennemi attaque !")
         if for_go >= dé() :
             Vie -= nb_gobelin
             print("L'ennemi vous a touché, vous subissez", nb_gobelin,"points de dégat(s) !")
@@ -171,46 +171,48 @@ choix_3 = str(input("\nFaites votres choix : "))
 nb_fauves = 2
 for_fa = 5
 vie_fa = 2
-choix_4 = str(input("\nFaites votres choix : "))
+
 salle_2 = "Vous faites maintenant face à deux fauves."," Que faites-vous dans cette situation ? Vous attaquez (Attaque), vous lancez un sort de soin (Sort), ou bien essayez d'esquiver (Esquive) ?"
 
-while nb_fauves > 0 :
-    if choix_3 == "Salle 2":
-       delay_print(salle_2)
-       print(choix_4)
-       if choix_4 == "Attaque":
-           if For >= dé():
+
+
+if choix_3 == "Salle 2":
+    delay_print(salle_2)
+    while nb_fauves > 0 :
+        choix_4 = str(input("\nFaites votres choix : "))
+        if choix_4 == "Attaque":
+            if For >= dé():
                vie_fa -= 1
                print("Vous avez touché votre cible !")
-           elif For <= dé():
+            elif For <= dé():
                print("Vous avez attaqué et raté votre coup lamentablement")
-       if choix_4 == "Sort":
-           if Int >= dé():
-               Vie += 2
-               print("Vous lancer un sort de soin et récupérez 2 points de vie !","Vous avez")
-           elif Int <= dé():
-               print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
-       if choix_2 == "Esquive":
-           if Agi >= dé() :
-               print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
-               for_fa = 0
-           else:
-               print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
-     if vie_fa == 0 :
-        nb_fauves -= 1
-        vie_fa = 2
-     if nb_fauves > 0 :
-        print("n\L'ennemi attaque !")
-        if for_fa >= dé() :
-           Vie -= nb_fauves
-           print("L'ennemi vous a touché, vous subissez", nb_fauves,"points de dégat(s) !")
-           if Vie > 0:
-               print("Il vous reste", Vie, "pv(s)")
-           elif Vie <= 0 :
-               delay_print(mort)
-               quit()
-        else :
-           delay_print("L'attaque a raté !")
+        if choix_4 == "Sort":
+            if Int >= dé():
+                Vie += 2
+                print("Vous lancer un sort de soin et récupérez 2 points de vie !","Vous avez")
+            elif Int <= dé():
+                print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
+        if choix_2 == "Esquive":
+            if Agi >= dé() :
+                print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
+                for_fa = 0
+            else:
+                print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
+        if vie_fa == 0 :
+            nb_fauves -= 1
+            vie_fa = 2
+        if nb_fauves > 0 :
+            print("L'ennemi attaque !")
+            if for_fa >= dé() :
+                Vie -= nb_fauves
+                print("L'ennemi vous a touché, vous subissez", nb_fauves,"points de dégat(s) !")
+                if Vie > 0:
+                    print("Il vous reste", Vie, "pv(s)")
+                elif Vie <= 0 :
+                    delay_print(mort)
+                    quit()
+            else :
+                delay_print("L'attaque a raté !")
    
             
             
