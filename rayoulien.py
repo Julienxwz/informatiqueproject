@@ -10,34 +10,34 @@ class Aventurier():
    for_av = 6
    agi_av = random.randint(4,5)
    vie_av= 6
-   int_av = random.randint(4,5)
+   int_av = random.randint(3,4)
 
 class Alchimiste():
-   for_al = random.randint(2,3)
-   agi_al = 6
+   for_al = random.randint(5,6)
+   agi_al = 4
    vie_al = random.randint(3,4)
    int_al = random.randint(6,8)
 
 class Assassin():
    for_as = random.randint(7,10)
    agi_as = random.randint(8,10)
-   vie_as = random.randint(1,3)
+   vie_as = random.randint(2,3)
    int_as = random.randint(5,7)
 
 class Pirate():
-   for_pi = random.randint(6,8)
+   for_pi = random.randint(7,8)
    agi_pi = random.randint(3,5)
    vie_pi = random.randint(6,8)
    int_pi = random.randint(1,3)
 
 class Archer():
-   for_ar = random.randint(5,7)
+   for_ar = random.randint(6,8)
    agi_ar = random.randint(6,8)
    vie_ar = random.randint(3,4)
    int_ar = random.randint(4,6)
 
 class Mage():
-   for_ma = 1
+   for_ma = 6
    agi_ma = random.randint(2,3)
    vie_ma = random.randint(6,7)
    int_ma = random.randint(8,10)
@@ -151,7 +151,7 @@ while nb_gobelin > 0 :
             print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
 
     if nb_gobelin > 0 :
-        print("L'ennemi attaque !")
+        print("n\L'ennemi attaque !")
         if for_go >= dé() :
             Vie -= nb_gobelin
             print("L'ennemi vous a touché, vous subissez", nb_gobelin,"points de dégat(s) !")
@@ -166,7 +166,7 @@ while nb_gobelin > 0 :
 
 print("Vous avez triomphé ! Vous pouvez maintenant poursuivre votre avancée.")
 
-print("Dans quelle salle voulez-vous aller?")
+print("Désirez-vous avancer (Salle 2) ou bien, miser sur votre destin (Salle Mystère) ?")
 choix_3 = str(input("\nFaites votres choix : "))
 nb_fauves = 2
 for_fa = 5
@@ -183,7 +183,7 @@ while nb_fauves > 0 :
                vie_fa -= 1
                print("Vous avez touché votre cible !")
            elif For <= dé():
-               print("Vous avez attaqué et raté votre coup lamentablement.")
+               print("Vous avez attaqué et raté votre coup lamentablement")
        if choix_4 == "Sort":
            if Int >= dé():
                Vie += 2
@@ -196,12 +196,12 @@ while nb_fauves > 0 :
                for_fa = 0
            else:
                print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
-    if vie_fa == 0 :
-        nb_fauves -= 1
-        vie_fa = 2
-    if nb_fauves > 0 :
-        print(" n\L'ennemi attaque !")
-        if for_fa >= dé() :
+      if vie_fa == 0 :
+         nb_fauves -= 1
+         vie_fa = 2
+      if nb_fauves > 0 :
+         print("n\L'ennemi attaque !")
+         if for_fa >= dé() :
             Vie -= nb_fauves
             print("L'ennemi vous a touché, vous subissez", nb_fauves,"points de dégat(s) !")
             if Vie > 0:
@@ -209,5 +209,17 @@ while nb_fauves > 0 :
             elif Vie <= 0 :
                 delay_print(mort)
                 quit()
-        else :
+         else :
             delay_print("L'attaque a raté !")
+   
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
