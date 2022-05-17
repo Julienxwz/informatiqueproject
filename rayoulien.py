@@ -228,8 +228,54 @@ if choix_3 == "Salle 2":
                     quit()
             else :
                 delay_print("L'attaque a raté !")
-   
-            
+if choix_3 == "Salle mystère":
+    print("Vous faites face à quelqu'un qui ressemble comme deux gouttes d'eau au Père Fourras. Dès l'instant où il vous voit, il vous dit:" , "Bonsoir cher aventurier, voulez-vous répondre à une question? Attention à votre choix car si vous répondez faux, vous riquez de perdre un peu de vie, mais si vous répondez bien, je vous rendrai incroyablement puissant")
+    if Int >= dé():
+        print("Je vais baisser la difficulté de ma question car je vous sens très intéressé des avantages")
+        print("\nVoici mon énigme: 2+2?")
+        réponse = str(input("Votre réponse "))
+        if réponse == "4":
+            print("Bravo, vous avez réussi à triomphé de ma terrible énigme, quelle attribut voulez-vous augmenter?")
+            boost = str(input("Force, Agilité, Vie, Intelligence? "))
+            if boost == "Force":
+                For += 1
+                print(For)
+            if boost == "Agilité":
+                Agi += 1
+                print(Agi)
+            if boost == "Vie":
+                vie_max += 1
+                print(vie_max)
+            if boost == "Intelligence":
+                Int += 1
+                print(Int)
+        else :
+            print("Vous n'êtes pas aussi intelligent que vous en avez l'air, je vous retire un point de vie pour la peine.")
+            Vie -= 1
+            print(Vie)
+    else :
+        print("\nVoici mon énigme: Quelle est le 39ème élément du tableau périodique? ")
+        réponse = str(input("Votre réponse "))
+        if réponse == "Yttrium":
+            print("Wow, vous avez triché mais bien joué, j'ai rien pu faire en faite.")
+            print("quelle attribut voulez-vous augmenter?")
+            boost = str(input("Force, Agilité, Vie, Intelligence? "))
+            if boost == "Force" :
+                For +=1
+                print(For)
+            if boost == "Agilité":
+                Agi +=1
+                print(Agi)
+            if boost == "Vie":
+                vie_max +=1
+                print(vie_max)
+            if boost == "Intelligence":
+                Int+=1
+                print(Int)
+        else :
+            print("Je m'attendais à cette issue, je vous enlève quand même un point de vie")
+            Vie -= 1
+            print(Vie)
             
             
             
