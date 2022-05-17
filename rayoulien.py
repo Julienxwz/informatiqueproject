@@ -183,7 +183,7 @@ while nb_fauves > 0 :
                vie_fa -= 1
                print("Vous avez touché votre cible !")
            elif For <= dé():
-               print("Vous avez attaqué et raté votre coup lamentablement")
+               print("Vous avez attaqué et raté votre coup lamentablement.")
        if choix_4 == "Sort":
            if Int >= dé():
                Vie += 2
@@ -200,7 +200,7 @@ while nb_fauves > 0 :
         nb_fauves -= 1
         vie_fa = 2
     if nb_fauves > 0 :
-        print("L'ennemi attaque !")
+        print(" L'ennemi attaque !")
         if for_fa >= dé() :
             Vie -= nb_fauves
             print("L'ennemi vous a touché, vous subissez", nb_fauves,"points de dégat(s) !")
