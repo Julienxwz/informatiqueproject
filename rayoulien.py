@@ -215,8 +215,8 @@ if choix_3 == "Salle 2":
                 if vie_max - Vie == 0 :
                     print("Vous êtes déjà en pleine forme !")
                     continue
-        else :
-            delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
+            else :
+                delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
         if choix_2 == "Esquive":
             if Agi >= dé() :
                 print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
@@ -224,6 +224,7 @@ if choix_3 == "Salle 2":
             else:
                 print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
         if vie_fa == 0 :
+            print("La bête succonbe de ses blessures et tombe !")
             nb_fauves -= 1
             vie_fa = 2
         if nb_fauves > 0 :
@@ -272,20 +273,19 @@ if choix_3 == "Salle mystère":
             boost = str(input("Force, Agilité, Vie, Intelligence? "))
             if boost == "Force" :
                 For +=1
-                print(For)
+                print("Vous sentez vos muscles se raffermir, votre force augmente :",For)
             if boost == "Agilité":
                 Agi +=1
-                print(Agi)
+                print("Vous vous sentez beaucoup plus léger, votre agilité augmente :",Agi)
             if boost == "Vie":
                 vie_max +=1
-                print(vie_max)
+                print("Votre corps devient plus résistant, votre vie augmente :",vie_max)
             if boost == "Intelligence":
                 Int+=1
-                print(Int)
+                print("Vous discernez mieux les détails de votre environnement, votre intelligence augmente :",Int)
         else :
-            print("Je m'attendais à cette issue, je vous enlève quand même un point de vie")
             Vie -= 1
-            print(Vie)
+            print("Je m'attendais à cette issue, je vous enlève quand même un point de vie :",Vie)
             
             
             
