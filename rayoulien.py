@@ -118,10 +118,41 @@ if choix == "Archer" :
    Vie = Archer.vie_ar
    Int = Archer.int_ar
 
-Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins.","Que faites-vous dans cette situation ? Vous attaquez physiquement (Attaque), vous lancez un sort de soin(Sort), ou bien essayez d'esquiver (Esquive) ?"
+Salle_1 = "Tandis que vous appréhendez les épreuves qui se dresseront devant vous, des flambeaux s’allument les uns après les autres tout autour de vous.","Quelques secondes de silence sont ensuite interrompues par des cris stridents et irréguliers. Vous faites maintenant face à 3 gobelins."
 
 slow_salle1 = "\n".join(Salle_1)
 delay_print(slow_salle1)
+
+print("""
+                                       . =#@#@@@@@@@@@@@%#-..   :=*#@@@@@@@=
+                                     .+%@@@@@@@@@@@@@@@@%%=..-*@@##%@@@@@%.
+                                    +@@@@@@@@@@@@@@@@@@%*=.+@@@%+@@@@@@@%.
+                                  .%@@@@@@@@@@@@@@@@@%*- +@@@%+=#%@@@%#*:--:
+                                 -@@@@@@@@@@@%@@@@@@@@*: %@@*    -@@*+%#*+.
+                                .@@@#@@@@@@@#++@@@@@@@@==@@%   .+@@%*%%%@@@+----:
+                                =@@@%@@@*#*-:+%@@@@@@@@= *@%*%@@####@%@@@@@%##+-..           =*
+                                +@@@@@@-+*:+%@@@@@@@@@@= +@@@@@@@%@@@@@@@@@@@@@@@@%***++*:-**@#-=+#*-..+@:
+                             .=#@@@@@*#==##@@@@@@@@@@@@*:%@=+#%#@@@@@@@@@@@@@@@@@@@@@##***%@@@%%%%%%@@@@%*
+                           .::.#@%@@%+#%@@@@@@@@@@@@@@@@@@@+-=@@@@@@@@@@@@@@@@@@@.-*%@@@@@@@@@@@@@@@@%%@%%=.
+                               .+%@@%@@@@@@@#+%@@@@@@@@@@@@%:@@@@@@@@@@@@%@@@@@@=#@@@@@@@@@@@@@@@@@@@@@@@@@@+
+                                -@@@@@@@@@@*%@@@@@@@@@@@@@#-:@@@@@@@@@@@@@@@@@@#%@@@@@@@@@%@@##*@@@@@@@@@@@@@*
+                             :+%@@@@@@#=--==@@@@%#@%@@@@@:.:#@@@@@@@@@@@@@@@@@%@@@@@#@@@@@%%@@@*@@@@@@@%@@@@@@=
+                           =@@@@@@@@@##@#**#+#@@@@@%@@@=+:#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#@@@@@@@@@@@@@%%@@@@@@@=
+                           .*@@@@%#-  .@@@++@@@@@%%@%%.=*=@@@@@@@@@@@@#%@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@%.
+                              ..       :*=:@%@%@@@#+=.=*=-%@@@@@@@@@@@=*+%####%###%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@-
+                                         .*@*=+*=.:  :==--+@@@@@#+%@@@%#+#%@@@@@@@@@@@@@@@@@@%@@@@%@@@@@@@@@@@@@*-
+                                         **+.:=. -:--*@@@*:%@@@@%-=#%@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@%@%:
+                                       *%@::-.=  =##% +@@@%=@@@@% -#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#@@@@@@@@@@@@@@@@=
+                                     .%@@%*+ :-:+@@@=. +@@@#@@@@* #@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:
+                                    .@@@@@#%  **@@@@*  .@@@@@@@@+%@@@@@@%##@@@@@@@@@@@@@@@@@@@@@@@@%#%@@@@@@@@@@@@@@@#
+                                    #@@%%@@@-*@@@@@@@- :@@@@@%#%@@%@%*#*#@@@@@@@@@@@@@@@@%%%%@@@%*=*@@@@@@@@@@@@@@@@@@.
+                                   .@@@@@@@@@%@@@@@@@@+=@@@@#@@@@#@@@@@@@@@@@@@@@@@#*==:..:#@@@@%..%@@@@@@@#@@@@@@@@@@-
+""")
+
+Salle_1b = "Que faites-vous dans cette situation ?","Vous attaquez physiquement (Attaque), vous lancez un sort de soin(Sort), ou bien essayez d'esquiver (Esquive) ?"
+
+slow_salle1b = "\n".join(Salle_1b)
+delay_print(slow_salle1b)
 
 vie_max = Vie
 
