@@ -221,7 +221,7 @@ nb_fauves = 2
 for_fa = 5
 vie_fa = 2
 
-salle_2 = "Vous faites maintenant face à deux fauves."," Que faites-vous dans cette situation ? Vous attaquez (Attaque), vous lancez un sort de soin (Sort), ou bien essayez d'esquiver (Esquive) ?"
+salle_2 = "Vous entendez soudainement un bruit sourd et lointain qui s'apparente à des grognements. Vous prenez alors la décision de poursuivre votre chemin malgré l’obscurité. Désormais, vous vous trouvez face à deux bêtes féroces qui s’apprêtent à vous dévorer jusqu’aux os . Leurs mâchoires saillantes et fielleuses ainsi que leurs regards remplis de rage ne laissent aucun doute quant à l’adversité qui vous guettera durant cette épreuve. Pensez-vous y arriver ?","Ils se tiennent devant vous."," Que faites-vous dans cette situation ? Vous attaquez (Attaque), vous lancez un sort de soin (Sort), ou bien essayez d'esquiver (Esquive) ?"
 
 if choix_3 == "Salle mystère":
     print("Vous faites face à quelqu'un qui ressemble comme deux gouttes d'eau au Père Fourras. Dès l'instant où il vous voit, il vous dit:" , "Bonsoir cher aventurier, voulez-vous répondre à une question? Attention à votre choix car si vous répondez faux, vous riquez de perdre un peu de vie, mais si vous répondez bien, je vous rendrai incroyablement puissant")
@@ -319,11 +319,12 @@ if choix_3 == "Salle 2":
             else :
                 delay_print("L'attaque a raté !")
 
-
+salle_min = C’est après cette rude épreuve que vous vous rapprochez de l’avant-dernier combat. Vos pas et votre respiration deviennent de plus en plus lourds tout comme l’atmosphère environnante. Dès l’instant où vous entrez dans la salle, une silhouette gigantesque engloutit la salle. L'obscurité est telle qu’il est impossible de se repérer. Deux sources de lumière se dressent au-dessus de vous. Cette obscurité provient en réalité de l’ombre du monstre que vous allez combattre durant cette épreuve. C'est une créature hybride à tête de taureau et pourvue de cornes : Le Minotaure.
 print("Vous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe")
 choix_5 = str(input("Faites votre choix"))
 if choix_5 == "Salle 3" :
-    print("""
+    
+   print("""
     
                                                                             :#.
                                                            .=*#%@@#+:      =@@.
