@@ -4,7 +4,11 @@ import sys
 
 import random
 
-
+class test():
+   for_te = 10
+   agi_te = 10
+   vie_te = 10
+   int_te = 10
 
 class Aventurier():
    for_av = 6
@@ -65,6 +69,12 @@ delay_print(slow_intro)
 
 choix = str(input("\nFaites votres choix : "))
 print("Vos stats sont :")
+if choix == "test":
+   print("Force :", test.for_te, "Agilité :", test.agi_te, "Vie :", test.vie_te, "Intelligence :", test.int_te)
+   For = test.for_te
+   Agi = test.agi_te
+   Vie = test.vie_te
+   Int = test.int_te
 if choix == "Pirate":
    print("Force :", Pirate.for_pi, "Agilité :", Pirate.agi_pi, "Vie :", Pirate.vie_pi, "Intelligence :", Pirate.int_pi)
    For = Pirate.for_pi
@@ -174,7 +184,7 @@ while nb_gobelin > 0 :
 
 print("Vous avez triomphé ! Vous pouvez maintenant poursuivre votre avancée.")
 
-print("Désirez-vous avancer (Salle 2) ou bien, miser sur votre destin (Salle Mystère) ?")
+print("Désirez-vous avancer (Salle 2) ou bien, miser sur votre destin (Salle mystère) ?")
 choix_3 = str(input("\nFaites votres choix : "))
 nb_fauves = 2
 for_fa = 5
@@ -196,15 +206,15 @@ if choix_3 == "Salle 2":
                print("Vous avez attaqué et raté votre coup lamentablement")
         if choix_4 == "Sort":
             if Int >= dé() :
-            if vie_max - Vie >= 2 :
-               Vie += 2
-               print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
-            if vie_max - Vie == 1 :
-               Vie+= 1
-               print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie !")
-            if vie_max - Vie == 0 :
-               print("Vous êtes déjà en pleine forme !")
-               continue
+                if vie_max - Vie >= 2 :
+                    Vie += 2
+                    print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
+                if vie_max - Vie == 1 :
+                    Vie+= 1
+                    print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie !")
+                if vie_max - Vie == 0 :
+                    print("Vous êtes déjà en pleine forme !")
+                    continue
         else :
             delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
         if choix_2 == "Esquive":
