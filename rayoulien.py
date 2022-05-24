@@ -319,15 +319,21 @@ if choix_3 == "Salle 2":
             else :
                 delay_print("L'attaque a raté !")
 
-salle_min = "C’est après cette rude épreuve que vous vous rapprochez de l’avant-dernier combat.", "Vos pas et votre respiration deviennent de plus en plus lourds tout comme l’atmosphère environnante. Dès l’instant où vous entrez dans la salle, une silhouette gigantesque engloutit la salle.","L'obscurité est telle qu’il est impossible de se repérer. Deux sources de lumière se dressent au-dessus de vous.", "Cette obscurité provient en réalité de l’ombre du monstre que vous allez combattre durant cette épreuve.", "C'est une créature hybride à tête de taureau et pourvue de cornes : Le Minotaure."
-slow_sallemin = "\n".join(salle_min)
-delay_print(slow_sallemin)
    
    
 print("Vous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe")
 choix_5 = str(input("Faites votre choix"))
+
+salle_min = "C’est après cette rude épreuve que vous vous rapprochez de l’avant-dernier combat.", "Vos pas et votre respiration deviennent de plus en plus lourds tout comme l’atmosphère environnante. Dès l’instant où vous entrez dans la salle, une silhouette gigantesque engloutit la salle.","L'obscurité est telle qu’il est impossible de se repérer. Deux sources de lumière se dressent au-dessus de vous.", "Cette obscurité provient en réalité de l’ombre du monstre que vous allez combattre durant cette épreuve.", "C'est une créature hybride à tête de taureau et pourvue de cornes : Le Minotaure."
+slow_sallemin = "\n".join(salle_min)
+
+
+class min():
+   for_mi = 5
+   vie_mi = 12 
+
 if choix_5 == "Salle 3" :
-    
+   delay_print(slow_sallemin) 
    print("""
     
                                                                             :#.
@@ -356,6 +362,7 @@ if choix_5 == "Salle 3" :
                                .--=. .-+**#%@@@%%%%%@@@%%@%@@#-=#%@@@@@@@@@#%-
                                :-.:   .-++#%%%###+##%%%%%@%#*:#=-+*@@@@@@@#+@%-
     """)
+   
             
             
             
