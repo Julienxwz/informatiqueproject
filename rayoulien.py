@@ -192,7 +192,55 @@ vie_fa = 2
 
 salle_2 = "Vous faites maintenant face à deux fauves."," Que faites-vous dans cette situation ? Vous attaquez (Attaque), vous lancez un sort de soin (Sort), ou bien essayez d'esquiver (Esquive) ?"
 
-
+if choix_3 == "Salle mystère":
+    print("Vous faites face à quelqu'un qui ressemble comme deux gouttes d'eau au Père Fourras. Dès l'instant où il vous voit, il vous dit:" , "Bonsoir cher aventurier, voulez-vous répondre à une question? Attention à votre choix car si vous répondez faux, vous riquez de perdre un peu de vie, mais si vous répondez bien, je vous rendrai incroyablement puissant")
+    if Int >= dé():
+        print("Je vais baisser la difficulté de ma question car je vous sens très intéressé des avantages")
+        print("\nVoici mon énigme: 2+2?")
+        réponse = str(input("Votre réponse "))
+        if réponse == "4":
+            print("Bravo, vous avez réussi à triomphé de ma terrible énigme, quelle attribut voulez-vous augmenter?")
+            boost = str(input("Force, Agilité, Vie, Intelligence? "))
+            if boost == "Force":
+                For += 1
+                print("Vous sentez vos muscles se raffermir, votre force augmente :", For)
+            if boost == "Agilité":
+                Agi += 1
+                print("Vous vous sentez beaucoup plus léger, votre agilité augmente :",Agi)
+            if boost == "Vie":
+                vie_max += 1
+                print("Votre corps devient plus résistant, votre vie augmente :",vie_max)
+            if boost == "Intelligence":
+                Int += 1
+                print("Vous discernez mieux les détails de votre environnement, votre intelligence augmente :",Int)
+        else :
+            print("Vous n'êtes pas aussi intelligent que vous en avez l'air, je vous retire un point de vie pour la peine.")
+            Vie -= 1
+            print(Vie)
+    else :
+        print("\nVoici mon énigme: Quelle est le 39ème élément du tableau périodique? ")
+        réponse = str(input("Votre réponse "))
+        if réponse == "Yttrium":
+            print("Wow, vous avez triché mais bien joué, j'ai rien pu faire en faite.")
+            print("quelle attribut voulez-vous augmenter?")
+            boost = str(input("Force, Agilité, Vie, Intelligence? "))
+            if boost == "Force" :
+                For +=1
+                print("Vous sentez vos muscles se raffermir, votre force augmente :",For)
+            if boost == "Agilité":
+                Agi +=1
+                print("Vous vous sentez beaucoup plus léger, votre agilité augmente :",Agi)
+            if boost == "Vie":
+                vie_max +=1
+                print("Votre corps devient plus résistant, votre vie augmente :",vie_max)
+            if boost == "Intelligence":
+                Int+=1
+                print("Vous discernez mieux les détails de votre environnement, votre intelligence augmente :",Int)
+        else :
+            Vie -= 1
+            print("Je m'attendais à cette issue, je vous enlève quand même un point de vie :",Vie)
+    print("Vous avancez maintenant vers la suite du donjon")
+    choix_3 = "Salle 2"
 
 if choix_3 == "Salle 2":
     delay_print(salle_2)
@@ -239,58 +287,12 @@ if choix_3 == "Salle 2":
                     quit()
             else :
                 delay_print("L'attaque a raté !")
-if choix_3 == "Salle mystère":
-    print("Vous faites face à quelqu'un qui ressemble comme deux gouttes d'eau au Père Fourras. Dès l'instant où il vous voit, il vous dit:" , "Bonsoir cher aventurier, voulez-vous répondre à une question? Attention à votre choix car si vous répondez faux, vous riquez de perdre un peu de vie, mais si vous répondez bien, je vous rendrai incroyablement puissant")
-    if Int >= dé():
-        print("Je vais baisser la difficulté de ma question car je vous sens très intéressé des avantages")
-        print("\nVoici mon énigme: 2+2?")
-        réponse = str(input("Votre réponse "))
-        if réponse == "4":
-            print("Bravo, vous avez réussi à triomphé de ma terrible énigme, quelle attribut voulez-vous augmenter?")
-            boost = str(input("Force, Agilité, Vie, Intelligence? "))
-            if boost == "Force":
-                For += 1
-                print(For)
-            if boost == "Agilité":
-                Agi += 1
-                print(Agi)
-            if boost == "Vie":
-                vie_max += 1
-                print(vie_max)
-            if boost == "Intelligence":
-                Int += 1
-                print(Int)
-        else :
-            print("Vous n'êtes pas aussi intelligent que vous en avez l'air, je vous retire un point de vie pour la peine.")
-            Vie -= 1
-            print(Vie)
-    else :
-        print("\nVoici mon énigme: Quelle est le 39ème élément du tableau périodique? ")
-        réponse = str(input("Votre réponse "))
-        if réponse == "Yttrium":
-            print("Wow, vous avez triché mais bien joué, j'ai rien pu faire en faite.")
-            print("quelle attribut voulez-vous augmenter?")
-            boost = str(input("Force, Agilité, Vie, Intelligence? "))
-            if boost == "Force" :
-                For +=1
-                print("Vous sentez vos muscles se raffermir, votre force augmente :",For)
-            if boost == "Agilité":
-                Agi +=1
-                print("Vous vous sentez beaucoup plus léger, votre agilité augmente :",Agi)
-            if boost == "Vie":
-                vie_max +=1
-                print("Votre corps devient plus résistant, votre vie augmente :",vie_max)
-            if boost == "Intelligence":
-                Int+=1
-                print("Vous discernez mieux les détails de votre environnement, votre intelligence augmente :",Int)
-        else :
-            Vie -= 1
-            print("Je m'attendais à cette issue, je vous enlève quand même un point de vie :",Vie)
-            
-            
-            
-            
-            
+
+
+print("Vous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe")
+choix_5 = str(input("Faites votre choix"))
+if choix_5 == "Salle 3" :
+    print("")
             
             
             
