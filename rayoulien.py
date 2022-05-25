@@ -364,4 +364,15 @@ if choix_5 == "Salle 3" :
     """)
             
             
-            
+print("Désirez-vous avancer (Salle 3) ou bien, miser sur votre destin (Salle mystère) ?")
+choix_4 = str(input("\nFaites votres choix : "))
+
+if choix_4 == "salle mystère 2":
+    print("Vous entrez dans la salle de la fontaine de vie, vous pouvez boire l'eau de la fontaine pour régénerer toute votre vie")
+    f = str(input("Voulez-vous arrêter à cette fontaine(oui) ou vous passez votre chemin (non)?"))
+    if f == "Benjamin":
+         print("Benjamin est detestable")
+    if f == "oui":
+        Vie = vie_max
+    else :
+        print("Vous passez votre chemin vers la salle suivante")
