@@ -417,4 +417,21 @@ if choix_5 == "Salle 3" :
                         quit()
                 else :
                     delay_print("L'attaque a raté !")
-            
+print("Vous avez gagné ! Vous récupérez sur son cadavre une pierre d'âme permettant de vous octroyer un bonus.")
+choix_7 = str(input("Voulez-vous soigner (Soin), gagner 1 de Force (Force) 1 d'Agilité (Agilité) ou 1 d'Intelligence (Intelligence) ?))
+if choix_7 == "Soin" :
+   Vie = vie_max
+   print("Vous avec maintenant", Vie, "points de vie.")
+if choix_7 == "Force" :
+   For += 1                    
+   print("Vous avez maintenant", For,"de force.")
+if choix_7 == "Agilité" :  
+   Agi += 1
+   print("Vous avez maintenant", Agi,"d'agilité.")
+if choix_7 == "Intelligence" : 
+   Int += 1                 
+   print("Vous avez maintenant", Int,"d'intelligence.")
+
+      
+      
+      
