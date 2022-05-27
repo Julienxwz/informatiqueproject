@@ -376,47 +376,47 @@ if choix_5 == "Salle 3" :
     """)
    
    while vie_mi > 0 : 
-    choix_6 = str(input("\nFaites votres choix : "))
-            if choix_6 == "Attaque":
-                if For >= dé():
-                   vie_mi -= random.randint(1,3
-                   print("Vous avez touché votre cible !")
-                elif For <= dé():
-                   print("Vous avez attaqué et raté votre coup lamentablement")
-            if choix_6 == "Sort":
-                if Int >= dé() :
-                    if vie_max - Vie >= 2 :
-                        Vie += 2
-                        print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
-                    if vie_max - Vie == 1 :
-                        Vie+= 1
-                        print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie !")
-                    if vie_max - Vie == 0 :
-                        print("Vous êtes déjà en pleine forme !")
-                        continue
-                else :
-                    delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
-            if choix_6 == "Esquive":
-                if Agi >= dé() :
-                    print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
-                    for_mi = 0
-                else:
-                    print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
+      choix_6 = str(input("\nFaites votres choix : "))
+         if choix_6 == "Attaque":
+            if For >= dé():
+               vie_mi -= random.randint(1,3
+               print("Vous avez touché votre cible !")
+            elif For <= dé():
+               print("Vous avez attaqué et raté votre coup lamentablement")
+         if choix_6 == "Sort":
+            if Int >= dé() :
+               if vie_max - Vie >= 2 :
+                  Vie += 2
+                  print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie !")
+               if vie_max - Vie == 1 :
+                  Vie+= 1
+                  print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie !")
+               if vie_max - Vie == 0 :
+                  print("Vous êtes déjà en pleine forme !")
+                  continue
+               else :
+                  delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
+         if choix_6 == "Esquive":
+            if Agi >= dé() :
+               print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
+               for_mi = 0
+            else:
+               print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
             if vie_mi == 0 :
                 print("La colosse succonbe de ses blessures et tombe !")
             if vie_mi > 0 :
                 print("L'ennemi attaque !")
                 if for_mi >= dé() :
-                    dégat_1 = random.randint(1,3)                        
-                    Vie -= dégat_1
-                    print("L'ennemi vous a touché, vous subissez", dégat_1,"points de dégat(s) !")
-                    if Vie > 0:
-                        print("Il vous reste", Vie, "pv(s)")
-                    elif Vie <= 0 :
-                        delay_print(mort)
-                        quit()
+                  dégat_1 = random.randint(1,3)                        
+                  Vie -= dégat_1
+                  print("L'ennemi vous a touché, vous subissez", dégat_1,"points de dégat(s) !")
+                  if Vie > 0:
+                     print("Il vous reste", Vie, "pv(s)")
+                  elif Vie <= 0 :
+                     delay_print(mort)
+                     quit()
                 else :
-                    delay_print("L'attaque a raté !")
+                  delay_print("L'attaque a raté !")
 print("Vous avez gagné ! Vous récupérez sur son cadavre une pierre d'âme permettant de vous octroyer un bonus.")
 choix_7 = str(input("Voulez-vous soigner (Soin), gagner 1 de Force (Force) 1 d'Agilité (Agilité) ou 1 d'Intelligence (Intelligence) ?))
 if choix_7 == "Soin" :
