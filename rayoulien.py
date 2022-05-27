@@ -350,7 +350,8 @@ salle_min = "C’est après cette rude épreuve que vous vous rapprochez de l’
 slow_sallemin = "\n".join(salle_min)
 delay_print(slow_sallemin)
 
-
+vie_mi = 12
+for_mi = 5
 print("\nVous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe")
 choix_5 = str(input("Faites votre choix"))
 if choix_5 == "Salle 3" :
