@@ -149,7 +149,7 @@ print("""
                                    .@@@@@@@@@%@@@@@@@@+=@@@@#@@@@#@@@@@@@@@@@@@@@@@#*==:..:#@@@@%..%@@@@@@@#@@@@@@@@@@-
 """)
 
-Salle_1b = "Que faites-vous dans cette situation ?","Vous attaquez physiquement (Attaque), vous lancez un sort de soin(Sort), ou bien essayez d'esquiver (Esquive) ?"
+Salle_1b = "Que faites-vous dans cette situation ?","Vous attaquez physiquement (Attaque), vous lancez un sort de soin (Sort), ou bien essayez d'esquiver (Esquive) ?"
 
 slow_salle1b = "\n".join(Salle_1b)
 delay_print(slow_salle1b)
@@ -346,7 +346,7 @@ if choix_3 == "Salle 2":
             else :
                 delay_print("L'attaque a raté !")
 
-print("\nVous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe ? :")
+print("\nVous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe ? : ")
 choix_5 = str(input("Faites votre choix :"))
 salle_min = "C’est après ces rudes épreuves que vous vous rapprochez de l’avant-dernier combat.", "Vos pas et votre respiration deviennent de plus en plus lourds, à l'instar de l’atmosphère environnante. Dès l’instant où vous entrez dans la salle, une silhouette gigantesque engloutit la salle.","L'obscurité est telle qu’il est impossible de se repérer. Deux sources de lumière se dressent au-dessus de vous.", "Cette obscurité provient en réalité de l’ombre du monstre que vous allez combattre durant cette épreuve.", "C'est une créature hybride à tête de taureau et pourvue de cornes : Le Minotaure."
 slow_sallemin = "\n".join(salle_min)
@@ -357,7 +357,7 @@ for_mi = 5
 
 if choix_5 == "Salle Annexe":
         print("Vous entrez dans la salle de la fontaine de vie, vous pouvez boire l'eau de la fontaine pour régénerer toute votre vie")
-        f = str(input("Voulez-vous vous arrêter à cette fontaine (Oui) ou passer votre chemin (Non)?"))
+        f = str(input("Voulez-vous vous arrêter à cette fontaine (Oui) ou passer votre chemin (Non)? : "))
         if f == "Non":
             print("Soucieux d'un potentiel piège, vous décidez de passer votre chemin.")
         if f == "Oui":
@@ -404,7 +404,7 @@ if choix_5 == "Salle 3" :
                 vie_mi -= random.randint(1, 3)
                 print("Vous avez touché votre cible !")
                 if vie_mi > 0 :
-                    print("Il lui reste ", vie_mi," pv(s) !")
+                    print("Il lui reste", vie_mi,"pv(s) !")
             elif For <= dé():
                 print("Vous avez attaqué et raté votre coup lamentablement")
         if choix_6 == "Sort":
@@ -427,7 +427,7 @@ if choix_5 == "Salle 3" :
             else:
                 print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
         if vie_mi == 0:
-           print("La colosse succonbe de ses blessures et tombe !")
+           print("La colosse succombe de ses blessures et tombe !")
         if vie_mi > 0:
             print("L'ennemi attaque !")
             if for_mi >= dé():
@@ -442,10 +442,10 @@ if choix_5 == "Salle 3" :
             else:
              delay_print("L'attaque a raté !")
 print("Vous avez gagné ! Vous récupérez sur son cadavre une pierre d'âme permettant de vous octroyer un bonus.")
-choix_7 = str(input("Voulez-vous soigner (Soin), gagner 1 de Force (Force) 1 d'Agilité (Agilité) ou 1 d'Intelligence (Intelligence) ?"))
+choix_7 = str(input("Voulez-vous soigner (Soin), gagner 1 de Force (Force) 1 d'Agilité (Agilité) ou 1 d'Intelligence (Intelligence) ? : "))
 if choix_7 == "Soin":
     Vie = vie_max
-    print("Vous avec maintenant", Vie, "points de vie.")
+    print("Vous retrouvez donc vos", Vie, "points de vie.")
 if choix_7 == "Force":
     For += 1
     print("Vous avez maintenant", For, "de force.")
