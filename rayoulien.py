@@ -411,21 +411,21 @@ if choix_5 == "Salle 3" :
            for_mi = 0
        else:
            print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
-       if vie_mi == 0:
-           print("La colosse succonbe de ses blessures et tombe !")
-       if vie_mi > 0:
-           print("L'ennemi attaque !")
-           if for_mi >= dé():
-               dégat_1 = random.randint(1, 3)
-               Vie -= dégat_1
-               print("L'ennemi vous a touché, vous subissez", dégat_1, "points de dégat(s) !")
-               if Vie > 0:
-                   print("Il vous reste", Vie, "pv(s)")
-               elif Vie <= 0:
-                   delay_print(mort)
-                   quit()
-           else:
-               delay_print("L'attaque a raté !")
+   if vie_mi == 0:
+      print("La colosse succonbe de ses blessures et tombe !")
+   if vie_mi > 0:
+      print("L'ennemi attaque !")
+      if for_mi >= dé():
+         dégat_1 = random.randint(1, 3)
+         Vie -= dégat_1
+         print("L'ennemi vous a touché, vous subissez", dégat_1, "points de dégat(s) !")
+         if Vie > 0:
+            print("Il vous reste", Vie, "pv(s)")
+         elif Vie <= 0:
+            delay_print(mort)
+            quit()
+      else:
+         delay_print("L'attaque a raté !")
 print("Vous avez gagné ! Vous récupérez sur son cadavre une pierre d'âme permettant de vous octroyer un bonus.")
 choix_7 = str(input(
     "Voulez-vous soigner (Soin), gagner 1 de Force (Force) 1 d'Agilité (Agilité) ou 1 d'Intelligence (Intelligence) ?))
