@@ -355,7 +355,6 @@ for_mi = 5
 print("\nVous avez une nouvelle fois gagné, où voulez-vous vous diriger ? La Salle 3 ou bien vers la Salle Annexe")
 choix_5 = str(input("Faites votre choix"))
 if choix_5 == "Salle 3" :
-
    print("""
                                                                             :#.
                                                            .=*#%@@#+:      =@@.
@@ -405,26 +404,26 @@ if choix_5 == "Salle 3" :
                continue
                else:
                delay_print("Vous tentez de lancer un sort de soin mais ratez son incantation.")
-   if choix_6 == "Esquive":
+    if choix_6 == "Esquive":
        if Agi >= dé():
            print("Vous observez attentivement les mouvements ennemis et percevez la faille !")
            for_mi = 0
        else:
            print("L'ennemi est trop rapide, vous n'arriverez pas à esquiver !")
-   if vie_mi == 0:
-      print("La colosse succonbe de ses blessures et tombe !")
-   if vie_mi > 0:
-      print("L'ennemi attaque !")
-      if for_mi >= dé():
-         dégat_1 = random.randint(1, 3)
-         Vie -= dégat_1
-         print("L'ennemi vous a touché, vous subissez", dégat_1, "points de dégat(s) !")
-         if Vie > 0:
-            print("Il vous reste", Vie, "pv(s)")
-         elif Vie <= 0:
-            delay_print(mort)
-            quit()
-      else:
+    if vie_mi == 0:
+       print("La colosse succonbe de ses blessures et tombe !")
+    if vie_mi > 0:
+       print("L'ennemi attaque !")
+       if for_mi >= dé():
+          dégat_1 = random.randint(1, 3)
+          Vie -= dégat_1
+          print("L'ennemi vous a touché, vous subissez", dégat_1, "points de dégat(s) !")
+          if Vie > 0:
+             print("Il vous reste", Vie, "pv(s)")
+          elif Vie <= 0:
+             delay_print(mort)
+             quit()
+       else:
          delay_print("L'attaque a raté !")
 print("Vous avez gagné ! Vous récupérez sur son cadavre une pierre d'âme permettant de vous octroyer un bonus.")
 choix_7 = str(input(
