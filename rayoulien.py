@@ -383,7 +383,7 @@ if choix_5 == "Salle 3" :
                                .--=. .-+**#%@@@%%%%%@@@%%@%@@#-=#%@@@@@@@@@#%-
                                :-.:   .-++#%%%###+##%%%%%@%#*:#=-+*@@@@@@@#+@%-
     """)
-     while vie_mi > 0:
+    while vie_mi > 0:
        choix_6 = str(input("\nFaites votres choix : "))
        if choix_6 == "Attaque":
            if For >= dé():
