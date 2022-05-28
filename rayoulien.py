@@ -352,7 +352,7 @@ for_mi = 5
 
 if choix_5 == "Salle Annexe":
         delay_print("Vous entrez dans la salle de la fontaine de vie, vous pouvez boire l'eau de la fontaine pour régénerer toute votre vie")
-        f = str(input("Voulez-vous vous arrêter à cette fontaine (Oui) ou passer votre chemin (Non) ? "))
+        f = str(input("\nVoulez-vous vous arrêter à cette fontaine (Oui) ou passer votre chemin (Non) ? "))
         if f == "Non":
             delay_print("Soucieux d'un potentiel piège, vous décidez de passer votre chemin.")
         if f == "Oui":
