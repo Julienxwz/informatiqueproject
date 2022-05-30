@@ -4,8 +4,6 @@ import sys
 
 import random
 
-time.sleep(7)
-
 class test():
    for_te = 10
    agi_te = 10
