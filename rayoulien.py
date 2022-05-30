@@ -4,6 +4,8 @@ import sys
 
 import random
 
+time.sleep(7)
+
 class test():
    for_te = 10
    agi_te = 10
@@ -406,10 +408,10 @@ if choix_5 == "Salle 3" :
             if Int >= dé():
                 if vie_max - Vie >= 2:
                     Vie += 2
-                    delay_print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie ! Vous en avez",Vie)
+                    print("Vous décidez de lancer un sort de soin et récupérez 2 points de vie ! Vous en avez",Vie)
                 if vie_max - Vie == 1:
                     Vie += 1
-                    delay_print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie ! Vous en avez",Vie)
+                    print("Vous décidez de lancer un sort de soin et récupérez 1 point de vie ! Vous en avez",Vie)
                 if vie_max - Vie == 0:
                     delay_print("Vous êtes déjà en pleine forme !")
                     continue
@@ -572,4 +574,3 @@ print("""
 """)
 fin = "Vous avez vaincu !","Bravo, Héros..."
 delay_print(fin)
-
