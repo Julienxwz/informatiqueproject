@@ -466,7 +466,7 @@ delay_print(trans)
 sallecoffre = "\nCet endroit a l’air d’être une ancienne salle des coffres.","Vous fouillez rapidement la salle et le contenu de chacun des coffres, mais celle-ci semble déjà avoir été pillée.","Cependant, au fond de la salle, une épée gigantesque est plantée dans le sol.","Au niveau de son manche, il y a comme un réceptacle. Le seul objet ayant l'air d'y convenir est le diamant récupéré sur le Minotaure.","Une fois placé, l'épée vous est accessible et vous paraît si légère."," Le destin vous fait une offrande, peut-être que quelque chose vous attend dans la prochaine salle…","Une fois de retour devant la porte vous balayez les cadavres et ouvrez la porte sans aucun efforts."
 
 sallecoffr="\n".join(sallecoffre)
-delay_print(sallecoffre)
+delay_print(sallecoffr)
 
 delay_print(sallefinale)
 
